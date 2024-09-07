@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+     <link rel="shortcut icon" href="./resources/favicon icon.jpeg" type="image/x-icon">
+     <link rel="sty lesheet" href="./src/input.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind CDN Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body><main class="block min-[850px]:flex">
+    <section class="min-w-fit p-4 shadow-md min-[850px]:h-screen min-[850px]:fixed top-0 left-0 z-10 bg-white border border-slate-500 rounded-md">
+        <article class="flex">
+            <input type="text" placeholder="Enter City Name" autocomplete="false" class="location-input w-full min-[850px]:w-fit border border-slate-300 rounded-md mt-1 py-2 ps-3 pe-5 shadow-sm">
+            <i class="location-search fa-solid fa-magnifying-glass cursor-pointer text-lg ms-2 bg-slate-800 text-white py-[10px] px-[15px] rounded-md mt-1 shadow-md"></i>
+            <i title="Search for Current Location" class="track-location fa-solid fa-location-crosshairs cursor-pointer text-lg ms-2 bg-slate-800 text-white py-[10px] px-[15px] mt-1 rounded-md shadow-md"></i>
+        </article>
+ 
+            <!-- Main Weather Data Section -->
+            <article class="main-weather-section hidden mt-5">
+                <img  alt="Weather Icon" class="location-weather-image w-44 min-[500px]:w-64 my-10 mx-auto">
+                <article class="mt-5">
+                    <p class="location-name text-2xl font-semibold"></p>
+                    <article class="flex justify-between items-center mt-2 text-xl pe-4">
+                        <p class="location-temp"></p> 
+                        <p class="location-date-time"></p>
+                    </article>
+                    <p class="location-weather-description max-w-[350px] pt-6 text-xl"></p>
+                </article>
+            </article>
+        </section>
+        </section>
+        <!-- Main Weather Section -->
+        
+        <!-- Other Weather Details Main Section -->
+        <section class="bg-slate-100 h-screen mt-10 min-[850px]:mt-0 flex-grow min-[850px]:ms-96 py-4 ps-4 min-[850px]:ps-8 pe-4 relative shadow-md rounded-md border border-slate-300">
+            <!-- Find City... -->
+            <article class="no-city-entered flex min-h-screen justify-center items-center absolute top-0 left-5 shadow-sm rounded-md border border-slate-200">
+                <p class="text-slate-600 text-6xl font-bold -mt-12">Start Entering City...</p>
+            </article>
+            <!-- Other Weather Details Section -->
+            <section class="shadow-md rounded-md border border-slate-200 p-4 bg-white">
+              
+                <section class="flex flex-col h-full gap-y-3 min-[460px]:flex-row gap-x-3 min-[460px]:items-center shadow-md rounded-md border border-slate-200">
+                    <!-- Extended Weather forecast Button -->
+                    <p class="hidden extended-forecast-heading w-full bg-slate-800 text-white rounded-md p-2 order-2 min-[460px]:-order-1 shadow-sm">View Weather for next 5 days</p>
+                    <!-- Recent Search Dropdown Menu -->
+                    <section class="recent-search-dropdown-container group relative rounded-md hidden shadow-md">
+                        <p class="recent-search-heading cursor-pointer w-full min-[460px]:w-max bg-slate-800 text-white rounded-md p-2 border-2 border-slate-700 shadow-sm">Recent Searches</p>
+                        
+                        <section class="recent-search-dropdown hidden group-hover:block w-full absolute top-[44px] bg-slate-300 shadow-lg rounded-lg z-10 p-4">
+                            
+                        </section>
+                    </section>
+                </section>
+                <!-- Extented Weather for 5 days -->
+                <section class="extended-forecast-container mt-3 flex flex-wrap justify-start min-[850px]:justify-around gap-y-4 gap-x-4 shadow-md rounded-md border border-slate-200">
+                    <!-- Day Weather -->
+                    
+                </section>
+                </section>
+                <!-- Today's Highlight -->
+                <section class="mt-10 shadow-md rounded-md border border-slate-200">
+                    <h2 class="hidden other-weather-details-section-heading text-3xl font-bold">Today's Highlight</h2>
+                    <section class="other-weather-section flex-wrap mt-5 flex gap-x-6 gap-y-6 p-4 bg-white">
+                        
+                    </section>
+                </section><!-- Other Weather Details Section -->
+        </section>
+        <!-- Other Weather Details Main Section -->
+    </main>
+    <!-- Main Section -->
+
+    <!-- External Script File -->
+    <script src="./src/app.js" defer></script>
+</body>
+</html>
